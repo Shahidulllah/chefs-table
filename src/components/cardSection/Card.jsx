@@ -12,13 +12,13 @@ const Card = () => {
     }, [])
     
     return (
-        <div className="main-container mt-10 flex gap-6">
+        <div className="main-container mt-10 flex gap-6 mb-16">
             <div className="card-container w-7/12 grid grid-cols-2 gap-6">
                 {
                     items.map(item=><LoadRacipe cardItem={item}></LoadRacipe>)
                 }
             </div>
-            <div className="cart-container p-6 border-2 rounded-2xl w-5/12 h-screen text-center">
+            <div className="cart-container p-6 border-2 rounded-2xl w-5/12 h-full text-center">
                <div className="space-y-4">
                <h1 className="text-2xl font-bold text-center">Want to cook: <span> 01</span></h1>
                 <hr />
