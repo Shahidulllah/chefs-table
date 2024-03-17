@@ -1,5 +1,6 @@
 
-const LoadRacipe = ({cardItem}) => {
+const LoadRacipe = ({cardItem, handleCart}) => {
+    
     return (
         <div className="single-card space-y-5 p-6 border-2 rounded-2xl">
         <img className="rounded-lg" src={cardItem.recipe_image} alt="" />
@@ -18,7 +19,7 @@ const LoadRacipe = ({cardItem}) => {
             <h6>{cardItem.calories}</h6>
         </div>
 
-        <button className="bg-green-500 rounded-full px-6 py-4 font-bold">Want to Cook</button>
+        <button onClick={()=>handleCart(cardItem)} className="bg-green-500 rounded-full px-6 py-4 font-bold">Want to Cook</button>
     </div>
     );
 };
