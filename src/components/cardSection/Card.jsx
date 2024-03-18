@@ -3,9 +3,7 @@ import { useEffect } from "react";
 import LoadRacipe from "../load-racipe/LoadRacipe";
 import Cook from "../cook/Cook";
 
-const Card = ({ handleCart, carts }) => {
-
-    // const {recipe_name} = carts;
+const Card = ({ handleCart, carts, removeItem}) => {
 
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -28,12 +26,12 @@ const Card = ({ handleCart, carts }) => {
                     <table className="w-full">
                         <tr>
                             <th></th>
-                            <th className="text-justify">Name</th>
-                            <th className="text-justify pl-9">Time</th>
+                            <th className="text-justify pl-3">Name</th>
+                            <th className="text-justify pl-7">Time</th>
                             <th className="text-justify pl-12">Calories</th>
                         </tr>
                         {
-                            carts.map(cart => <Cook cart={cart}></Cook>)
+                            carts.map((cart, index) => <Cook cart={cart} index={index} removeItem={removeItem}></Cook>)
                         }
                     </table>
 
