@@ -1,3 +1,4 @@
+import { CgProfile } from "react-icons/cg";
 const Nav = () => {
     return (
         <div className="nav-container flex justify-between mt-10">
@@ -20,8 +21,8 @@ const Nav = () => {
             </label>
 
             <div className="profile avatar placeholder text-center">
-              <div className="bg-green-500 text-neutral-content rounded-full  p-3 w-12 text-center">
-                <span className="text-xs">Pro</span>
+              <div className="bg-green-500 text-neutral-content rounded-full  p-3  text-center">
+               <CgProfile/>
               </div>
             </div>
           </div>
